@@ -63,7 +63,7 @@ const MainCarousel = () => {
               margin={isNonMobile ? undefined : "0 auto"}
               maxWidth={isNonMobile ? undefined : "350px"}
               height={isNonMobile ? undefined : "100px"}
-              display={isNonMobile ? undefined : "block"}
+              display={isNonMobile ? undefined : "none"}
             >
               <Typography variant={isNonMobile ? "h1" : "h2"}>
                 Christmas Sale!

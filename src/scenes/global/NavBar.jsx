@@ -76,7 +76,9 @@ const NavBar = () => {
           >
             <IconButton
               onClick={() => {
-                dispatch(setIsCartOpen({}));
+                if (cart.length > 0) {
+                  dispatch(setIsCartOpen({}));
+                }
               }}
               sx={{
                 color: "white",
