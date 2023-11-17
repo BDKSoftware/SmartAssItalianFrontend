@@ -66,9 +66,10 @@ const CartMenu = () => {
                   <Box flex="1 1 40%">
                     <img
                       alt={item?.name}
-                      width="123px"
-                      height="164px"
+                      width="150px"
+                      height="150px"
                       src={`https://strapi-cho2.onrender.com${item?.attributes?.image?.data?.attributes?.url}`}
+                      style={{ objectFit: "cover", OObjectPosition: "center" }}
                     />
                   </Box>
                   <Box flex="1 1 60%">
