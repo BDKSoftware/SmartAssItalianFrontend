@@ -49,7 +49,8 @@ const NavBar = () => {
           }}
           color={shades.secondary[500]}
         >
-          SmartAss<span style={{ color: "#1c8454" }}>Italian.com</span>
+          Smart<span style={{ color: "white" }}>Ass</span>
+          <span style={{ color: "#1c8454" }}>Italian.com</span>
         </Box>
         <Box
           display="flex"
