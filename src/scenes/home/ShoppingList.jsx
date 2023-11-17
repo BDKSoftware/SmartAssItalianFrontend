@@ -67,8 +67,16 @@ const ShoppingList = () => {
       >
         <Tab label="All" value="all" />
         <Tab label="NEW ARRIVALS" value="newArrivals" />
-        <Tab label="BEST SELLERS" value="bestSellers" />
-        <Tab label="TOP RATED" value="topRated" />
+        <Tab
+          label="BEST SELLERS"
+          value="bestSellers"
+          sx={{ display: isNonMobile ? "block" : "none" }}
+        />
+        <Tab
+          label="TOP RATED"
+          value="topRated"
+          sx={{ display: isNonMobile ? "block" : "none" }}
+        />
       </Tabs>
       <Box
         margin="0 auto"
