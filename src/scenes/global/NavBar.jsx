@@ -69,6 +69,7 @@ const NavBar = () => {
                 padding: "0 4px",
                 height: "14px",
                 minWidth: "13px",
+                backgroundColor: "red",
               },
             }}
           >
