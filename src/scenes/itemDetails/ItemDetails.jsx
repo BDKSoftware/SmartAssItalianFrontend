@@ -59,7 +59,7 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`https://strapi-cho2.onrender.com${item?.attributes?.image?.data?.attributes?.url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
