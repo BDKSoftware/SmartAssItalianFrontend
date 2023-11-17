@@ -9,7 +9,7 @@ import Shipping from "./Shipping";
 import { loadStripe } from "@stripe/stripe-js";
 
 const stripePromise = loadStripe(
-  "pk_test_51LgU7yConHioZHhlAcZdfDAnV9643a7N1CMpxlKtzI1AUWLsRyrord79GYzZQ6m8RzVnVQaHsgbvN1qSpiDegoPi006QkO0Mlc"
+  "pk_live_51ODZAAEKIjjJilvOKsGX8c2V5jt8TEYfX2qE3P3BmQH96dn7yICCg1lqCIGw7OOIHGpz1kDy571h1musy0r0vb1f00yZ7VTWdu"
 );
 
 const Checkout = () => {
@@ -19,15 +19,8 @@ const Checkout = () => {
   const isSecondStep = activeStep === 1;
 
   const handleFormSubmit = async (values, actions) => {
+    console.log("here");
     setActiveStep(activeStep + 1);
-
-    // this copies the billing address onto shipping address
-    if (isFirstStep && values.shippingAddress.isSameAddress) {
-      actions.setFieldValue("shippingAddress", {
-        ...values.billingAddress,
-        isSameAddress: true,
-      });
-    }
 
     if (isSecondStep) {
       makePayment(values);
@@ -47,12 +40,16 @@ const Checkout = () => {
       })),
     };
 
-    const response = await fetch("http://localhost:1337/api/orders", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
-    });
-    const session = await response.json();
+    const response = await fetch(
+      "https://strapi-cho2.onrender.com/api/orders",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestBody),
+      }
+    );
+    let session = await response.json();
+    console.log(session.id);
     await stripe.redirectToCheckout({
       sessionId: session.id,
     });

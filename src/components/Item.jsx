@@ -18,7 +18,6 @@ const Item = ({ item, width }) => {
 
   const { category, price, name } = item.attributes;
   const url = item.attributes.image.data.attributes.url;
-  console.log("image", item.attributes.image.data.attributes.formats.medium);
 
   return (
     <Box width={width}>

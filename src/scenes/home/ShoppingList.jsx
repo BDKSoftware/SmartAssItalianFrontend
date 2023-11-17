@@ -54,14 +54,20 @@ const ShoppingList = () => {
           m: "25px",
           "& .MuiTabs-flexContainer": {
             flexWrap: "wrap",
+            backgroundColor: "transparent",
           },
           "& .MuiTabs-indicator": {
-            backgroundColor: "#1c8454",
+            backgroundColor: "black",
             height: 3,
           },
           "& .MuiTab-root.Mui-selected": {
-            color: "#1c8454",
+            color: "white",
+            backgroundColor: "red",
           },
+          "& .MuiTab-root": {
+            color: "white",
+          },
+          backgroundColor: "#1c8454",
         }}
         inkBarStyle={{ color: "red" }}
       >
@@ -70,12 +76,12 @@ const ShoppingList = () => {
         <Tab
           label="BEST SELLERS"
           value="bestSellers"
-          sx={{ display: isNonMobile ? "block" : "none" }}
+          sx={{ display: isNonMobile ? undefined : "none" }}
         />
         <Tab
           label="TOP RATED"
           value="topRated"
-          sx={{ display: isNonMobile ? "block" : "none" }}
+          sx={{ display: isNonMobile ? undefined : "none" }}
         />
       </Tabs>
       <Box

@@ -20,7 +20,7 @@ const MainCarousel = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)");
 
   return (
-    <div style={{ width: "100%", backgroundColor: shades.neutral[500] }}>
+    <div style={{ width: "100%", backgroundColor: "black" }}>
       <Carousel
         style={{ backgroundColor: shades.secondary[500] }}
         infiniteLoop={true}
@@ -65,7 +65,7 @@ const MainCarousel = () => {
               alt={`carousel-${index}`}
               style={{
                 width: "100%",
-                height: "400px",
+                height: "700px",
                 objectFit: "contain",
                 backgroundAttachment: "fixed",
               }}
@@ -76,7 +76,7 @@ const MainCarousel = () => {
               padding="20px"
               borderRadius="1px"
               textAlign="left"
-              backgroundColor="rgba(0,0,0,0.4)"
+              backgroundColor="rgba(0,255,0,0.4)"
               position="absolute"
               top={isNonMobile ? "46%" : "10%"}
               left={isNonMobile ? "10%" : "0"}

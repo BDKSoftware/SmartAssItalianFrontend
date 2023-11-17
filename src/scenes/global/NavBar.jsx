@@ -23,7 +23,7 @@ const NavBar = () => {
       alignItems="center"
       width="100%"
       height="60px"
-      backgroundColor="rgba(255, 255, 255, 0.95)"
+      backgroundColor="rgba(0, 0, 0, 0.95)"
       color="black"
       position="fixed"
       top="0"
@@ -75,7 +75,10 @@ const NavBar = () => {
               onClick={() => {
                 dispatch(setIsCartOpen({}));
               }}
-              sx={{ color: "black" }}
+              sx={{
+                color: "white",
+                ":hover": { color: shades.secondary[500] },
+              }}
             >
               <ShoppingBagOutlined />
             </IconButton>
