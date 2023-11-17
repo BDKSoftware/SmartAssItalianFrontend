@@ -29,10 +29,14 @@ const Item = ({ item, width }) => {
         <img
           alt={item.name}
           width="300px"
-          height="400px"
+          height="300px"
           src={`https://strapi-cho2.onrender.com${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
-          style={{ cursor: "pointer" }}
+          style={{
+            cursor: "pointer",
+            objectFit: "cover",
+            OObjectPosition: "center",
+          }}
         />
         <Box
           display={isHovered ? "block" : "none"}

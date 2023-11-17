@@ -57,10 +57,13 @@ const ItemDetails = () => {
         <Box flex="1 1 40%" mb="40px">
           <img
             alt={item?.name}
-            width="100%"
-            height="100%"
             src={`https://strapi-cho2.onrender.com${item?.attributes?.image?.data?.attributes?.url}`}
-            style={{ objectFit: "contain" }}
+            style={{
+              objectFit: "cover",
+              width: "500px",
+              height: "500px",
+              objectPosition: "center",
+            }}
           />
         </Box>
 
