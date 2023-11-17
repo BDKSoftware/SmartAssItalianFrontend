@@ -21,7 +21,7 @@ const MainCarousel = () => {
 
   const settings = {
     showArrows: false,
-    interval: 3500,
+    interval: 4500,
     dynamicHeight: false,
     stopOnHover: false,
     infiniteLoop: true,
