@@ -19,45 +19,24 @@ export const heroTextureImports = importAll(
 const MainCarousel = () => {
   const isNonMobile = useMediaQuery("(min-width: 600px)");
 
+  const settings = {
+    showArrows: false,
+    interval: 3500,
+    dynamicHeight: false,
+    stopOnHover: false,
+    infiniteLoop: true,
+    showStatus: false,
+    transitionTime: 500,
+    showThumbs: false,
+    showIndicators: true,
+    swipeable: true,
+    emulateTouch: true,
+    autoPlay: true,
+  };
+
   return (
     <div style={{ width: "100%", backgroundColor: "black" }}>
-      <Carousel
-        style={{ backgroundColor: shades.secondary[500] }}
-        infiniteLoop={true}
-        showThumbs={false}
-        showIndicators={false}
-        showStatus={false}
-        renderArrowPrev={(onClickHandler, hasPrev, label) => (
-          <IconButton
-            onClick={onClickHandler}
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "0",
-              color: shades.secondary[500],
-              padding: "5px",
-              zindex: "10",
-            }}
-          >
-            <NavigateBeforeIcon sx={{ fontSize: 40 }} />
-          </IconButton>
-        )}
-        renderArrowNext={(onClickHandler, hasNext, label) => (
-          <IconButton
-            onClick={onClickHandler}
-            sx={{
-              position: "absolute",
-              top: "50%",
-              right: "0",
-              color: shades.secondary[500],
-              padding: "5px",
-              zindex: "10",
-            }}
-          >
-            <NavigateNextIcon sx={{ fontSize: 40 }} />
-          </IconButton>
-        )}
-      >
+      <Carousel {...settings}>
         {Object.values(heroTextureImports).map((texture, index) => (
           <Box key={`carousel-image-${index}`}>
             <img
