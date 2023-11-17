@@ -78,13 +78,17 @@ const MainCarousel = () => {
               textAlign="left"
               backgroundColor="rgba(0,0,0,0.4)"
               position="absolute"
-              top="46%"
+              top={isNonMobile ? "46%" : "10%"}
               left={isNonMobile ? "10%" : "0"}
               right={isNonMobile ? undefined : "0"}
               margin={isNonMobile ? undefined : "0 auto"}
-              maxWidth={isNonMobile ? undefined : "240px"}
+              maxWidth={isNonMobile ? undefined : "350px"}
+              height={isNonMobile ? undefined : "100px"}
+              display={isNonMobile ? undefined : "block"}
             >
-              <Typography variant="h1">Christmas Sale!</Typography>
+              <Typography variant={isNonMobile ? "h1" : "h2"}>
+                Christmas Sale!
+              </Typography>
               <Typography fontWeight="500" color={shades.neutral[200]}>
                 New Items Released
               </Typography>
