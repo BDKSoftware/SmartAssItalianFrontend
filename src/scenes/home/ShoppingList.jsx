@@ -57,17 +57,15 @@ const ShoppingList = () => {
             backgroundColor: "transparent",
           },
           "& .MuiTabs-indicator": {
-            backgroundColor: "black",
+            backgroundColor: "green",
             height: 3,
           },
           "& .MuiTab-root.Mui-selected": {
-            color: "white",
-            backgroundColor: "red",
+            color: "#1c8454",
           },
           "& .MuiTab-root": {
-            color: "white",
+            color: "black",
           },
-          backgroundColor: "#1c8454",
         }}
         inkBarStyle={{ color: "red" }}
       >

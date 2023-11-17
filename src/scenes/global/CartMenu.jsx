@@ -134,7 +134,7 @@ const CartMenu = () => {
                 minWidth: "100%",
                 padding: "20px 40px",
                 m: "20px 0",
-                ":hover": { backgroundColor: shades.primary[500] },
+                ":hover": { backgroundColor: "#1c8454" },
               }}
               onClick={() => {
                 navigate("/checkout");

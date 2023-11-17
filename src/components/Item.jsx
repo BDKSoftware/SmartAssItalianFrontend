@@ -64,7 +64,7 @@ const Item = ({ item, width }) => {
               sx={{
                 backgroundColor: shades.primary[300],
                 color: "white",
-                ":hover": { backgroundColor: shades.primary[500] },
+                ":hover": { backgroundColor: "#1c8454" },
               }}
             >
               Add to Cart

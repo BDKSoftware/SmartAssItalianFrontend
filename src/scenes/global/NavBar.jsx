@@ -49,8 +49,9 @@ const NavBar = () => {
           }}
           color={shades.secondary[500]}
         >
-          Smart<span style={{ color: "white" }}>Ass</span>
-          <span style={{ color: "#1c8454" }}>Italian.com</span>
+          <span style={{ color: "#1c8454" }}>Smart</span>
+          <span style={{ color: "white" }}>Ass</span>
+          Italian.com
         </Box>
         <Box
           display="flex"
@@ -79,7 +80,7 @@ const NavBar = () => {
               }}
               sx={{
                 color: "white",
-                ":hover": { color: shades.secondary[500] },
+                ":hover": { color: "#1c8454" },
               }}
             >
               <ShoppingBagOutlined />
