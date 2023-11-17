@@ -28,7 +28,7 @@ const MainCarousel = () => {
     showStatus: false,
     transitionTime: 500,
     showThumbs: false,
-    showIndicators: true,
+    showIndicators: false,
     swipeable: true,
     emulateTouch: true,
     autoPlay: true,
