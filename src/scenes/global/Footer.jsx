@@ -33,7 +33,7 @@ const Footer = () => {
             Contact Us
           </Typography>
           <Typography mb="30px" color={"white"}>
-            100 Fake Street, Scottsdale, AZ
+            9372 E Taro Ln, Scottsdale, AZ 85255
           </Typography>
           <Typography mb="30px" sx={{ wordWrap: "break-word" }} color={"white"}>
             Email: Johntaglia@gmail.com

@@ -77,7 +77,7 @@ const ItemDetails = () => {
             <Typography variant="h3" fontWeight="bold">
               {item?.attributes?.name}
             </Typography>
-            <Typography fontWeight="600" mt="10px">
+            <Typography fontWeight="600" mt="10px" fontSize="18px">
               ${item?.attributes?.price}
             </Typography>
             <Typography
