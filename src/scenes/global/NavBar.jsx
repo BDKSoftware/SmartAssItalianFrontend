@@ -11,6 +11,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { shades } from "../../theme";
 import { setIsCartOpen } from "../../state";
+import logo from "../../logo/logo-no-bg.png";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -46,9 +47,13 @@ const NavBar = () => {
               cursor: "pointer",
             },
             fontSize: "1.5rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-around",
           }}
           color={shades.secondary[500]}
         >
+          <img alt="nav-logo" src={logo} width="60" height={60} />
           <span style={{ color: "#1c8454" }}>Smart</span>
           <span style={{ color: "white" }}>Ass</span>
           Italian.com
